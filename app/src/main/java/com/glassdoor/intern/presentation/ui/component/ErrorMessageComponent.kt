@@ -10,12 +10,15 @@
 package com.glassdoor.intern.presentation.ui.component
 
 import androidx.compose.animation.Crossfade
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
@@ -24,9 +27,9 @@ import com.glassdoor.intern.utils.previewParameterProviderOf
 import kotlinx.coroutines.delay
 
 /**
- * TODO: Define how long the error message will be displayed
+ * DONE: Define how long the error message will be displayed
  */
-private const val SHOW_ERROR_MESSAGE_DURATION_IS_MILLIS: Long = 0L
+private const val SHOW_ERROR_MESSAGE_DURATION_IS_MILLIS: Long = 3000L
 
 @Composable
 internal fun ErrorMessageComponent(
@@ -40,21 +43,27 @@ internal fun ErrorMessageComponent(
 ) { state ->
     if (!state.isNullOrEmpty()) {
         /**
-         * TODO: Define the [background color](https://developer.android.com/jetpack/compose/modifiers#scope-safety), as well as [the color, style, and alignment](https://developer.android.com/jetpack/compose/text/style-text) of the error message
+         * DONE: Define the [background color](https://developer.android.com/jetpack/compose/modifiers#scope-safety), as well as [the color, style, and alignment](https://developer.android.com/jetpack/compose/text/style-text) of the error message
          */
         Text(
             modifier = Modifier
                 .fillMaxWidth()
+                .padding(InternTheme.dimensions.normal)
+                .background(MaterialTheme.colorScheme.errorContainer)
                 .padding(InternTheme.dimensions.normal),
             text = state,
+            color = MaterialTheme.colorScheme.error, // Use Material Design error color
+            style = MaterialTheme.typography.bodyLarge,
+            textAlign = TextAlign.Center,
         )
 
         LaunchedEffect(key1 = errorMessage) {
             delay(SHOW_ERROR_MESSAGE_DURATION_IS_MILLIS)
 
             /**
-             * TODO: Call an action that hides the error message
+             * DONE: Call an action that hides the error message
              */
+            hideErrorMessageAction()
         }
     }
 }
