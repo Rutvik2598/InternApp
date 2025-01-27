@@ -15,9 +15,9 @@ After the deadline, **every 4 hours of delay** are counted as **minus 1 point**.
 
 ### Preparations
 
-- [ ] Download and install the latest (stable) version of [Android Studio](https://developer.android.com/studio)
-- [ ] Download and extract the **Homework Project** to the destination folder
-- [ ] [Enable version control system for the project](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github)
+- [x] Download and install the latest (stable) version of [Android Studio](https://developer.android.com/studio)
+- [x] Download and extract the **Homework Project** to the destination folder
+- [x] [Enable version control system for the project](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github)
 
 ### Instructions
 
@@ -28,13 +28,13 @@ For each correctly completed instruction, **1 point** is awarded, which must the
 
 - [x] [AndroidManifest.xml](app/src/main/AndroidManifest.xml): [Define the required permissions](https://developer.android.com/develop/connectivity/network-ops/connecting)
 - [x] [AndroidManifest.xml](app/src/main/AndroidManifest.xml): [Specify application class](https://developer.android.com/reference/android/app/Application)
-- [ ] [ContentComponent.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/component/ContentComponent.kt): [Declare the UI](https://developer.android.com/codelabs/jetpack-compose-basics#5) based on the UI model structure
-- [ ] [ContentComponent.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/component/ContentComponent.kt): [Request an image download](https://github.com/coil-kt/coil#requests)
-- [ ] [ContentComponent.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/component/ContentComponent.kt): Define UI models for preview purposes
-- [ ] [ContentComponent.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/component/ContentComponent.kt): Define UI models for preview purposes
-- [ ] [ContentComponent.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/component/ContentComponent.kt): Specify the [item key](https://developer.android.com/jetpack/compose/lists#item-keys) and [content type](https://developer.android.com/jetpack/compose/lists#content-type)
+- [x] [ContentComponent.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/component/ContentComponent.kt): [Declare the UI](https://developer.android.com/codelabs/jetpack-compose-basics#5) based on the UI model structure
+- [x] [ContentComponent.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/component/ContentComponent.kt): [Request an image download](https://github.com/coil-kt/coil#requests)
+- [x] [ContentComponent.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/component/ContentComponent.kt): Define UI models for preview purposes
+- [x] [ContentComponent.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/component/ContentComponent.kt): Define UI models for preview purposes
+- [x] [ContentComponent.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/component/ContentComponent.kt): Specify the [item key](https://developer.android.com/jetpack/compose/lists#item-keys) and [content type](https://developer.android.com/jetpack/compose/lists#content-type)
 - [x] [CoroutineModule.kt](app/src/main/java/com/glassdoor/intern/utils/coroutine/CoroutineModule.kt): [Annotate the DI module](https://developer.android.com/training/dependency-injection/hilt-android#hilt-modules) with correct definitions and [component](https://developer.android.com/training/dependency-injection/hilt-android#hilt-modules)
-- [ ] [CoroutineModule.kt](app/src/main/java/com/glassdoor/intern/utils/coroutine/CoroutineModule.kt): Annotate dependency with the correct [qualifier label](https://developer.android.com/training/dependency-injection/hilt-android#multiple-bindings)
+- [x] [CoroutineModule.kt](app/src/main/java/com/glassdoor/intern/utils/coroutine/CoroutineModule.kt): Annotate dependency with the correct [qualifier label](https://developer.android.com/training/dependency-injection/hilt-android#multiple-bindings)
 - [x] [DomainModule.kt](app/src/main/java/com/glassdoor/intern/domain/di/DomainModule.kt): Determine the [appropriate annotation](https://developer.android.com/codelabs/android-hilt#6) and provide the most optimal [scope component](https://developer.android.com/training/dependency-injection/hilt-android#generated-components)
 - [ ] [ErrorMessageComponent.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/component/ErrorMessageComponent.kt): Call an action that hides the error message
 - [ ] [ErrorMessageComponent.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/component/ErrorMessageComponent.kt): Define how long the error message will be displayed
@@ -42,8 +42,8 @@ For each correctly completed instruction, **1 point** is awarded, which must the
 - [ ] [HeaderInfo.kt](app/src/main/java/com/glassdoor/intern/domain/model/HeaderInfo.kt): Determine undefined model properties
 - [ ] [HeaderInfoDto.kt](app/src/main/java/com/glassdoor/intern/data/model/HeaderInfoDto.kt): Define the structure of the DTO model based on the server response
 - [ ] [HeaderInfoMapper.kt](app/src/main/java/com/glassdoor/intern/data/mapper/HeaderInfoMapper.kt): Complete the transformation logic
-- [ ] [HeaderUiModel.kt](app/src/main/java/com/glassdoor/intern/presentation/model/HeaderUiModel.kt): Define empty state
-- [ ] [HeaderUiModel.kt](app/src/main/java/com/glassdoor/intern/presentation/model/HeaderUiModel.kt): Define the structure of the UI model based on the domain model
+- [x] [HeaderUiModel.kt](app/src/main/java/com/glassdoor/intern/presentation/model/HeaderUiModel.kt): Define empty state
+- [x] [HeaderUiModel.kt](app/src/main/java/com/glassdoor/intern/presentation/model/HeaderUiModel.kt): Define the structure of the UI model based on the domain model
 - [ ] [HeaderUiModelMapper.kt](app/src/main/java/com/glassdoor/intern/presentation/mapper/HeaderUiModelMapper.kt): Convert domain model to UI model
 - [ ] [HeaderUiModelMapper.kt](app/src/main/java/com/glassdoor/intern/presentation/mapper/HeaderUiModelMapper.kt): Define date formatting pattern
 - [ ] [InfoApi.kt](app/src/main/java/com/glassdoor/intern/data/source/InfoApi.kt): Apply the [get annotation](https://square.github.io/retrofit) and specify the correct endpoint from `BuildConfig`
@@ -52,7 +52,7 @@ For each correctly completed instruction, **1 point** is awarded, which must the
 - [ ] [InfoRepositoryImpl.kt](app/src/main/java/com/glassdoor/intern/data/repository/InfoRepositoryImpl.kt): Convert to error
 - [ ] [InfoRepositoryImpl.kt](app/src/main/java/com/glassdoor/intern/data/repository/InfoRepositoryImpl.kt): Convert to error
 - [ ] [InfoRepositoryImpl.kt](app/src/main/java/com/glassdoor/intern/data/repository/InfoRepositoryImpl.kt): Inject the correct mapper dependency
-- [ ] [ItemUiModel.kt](app/src/main/java/com/glassdoor/intern/presentation/model/ItemUiModel.kt): Determine the key value
+- [x] [ItemUiModel.kt](app/src/main/java/com/glassdoor/intern/presentation/model/ItemUiModel.kt): Determine the key value
 - [x] [LoggingModule.kt](app/src/main/java/com/glassdoor/intern/utils/logging/LoggingModule.kt): [Annotate the DI module](https://developer.android.com/training/dependency-injection/hilt-android#hilt-modules) with correct definitions and [component](https://developer.android.com/training/dependency-injection/hilt-android#hilt-modules)
 - [ ] [MainActivity.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/MainActivity.kt): [Annotate a class for dependency injection](https://developer.android.com/training/dependency-injection/hilt-android#android-classes)
 - [ ] [MainActivity.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/MainActivity.kt): Define the main composable to display

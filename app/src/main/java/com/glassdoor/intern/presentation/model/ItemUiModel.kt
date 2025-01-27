@@ -23,6 +23,9 @@ internal data class ItemUiModel(
     val timestamp: String,
 ) : Parcelable {
 
+    /**
+     * DONE: Determine the key value
+     */
     @IgnoredOnParcel
-    val key: String = TODO("Determine the key value")
+    val key: String = title
 }

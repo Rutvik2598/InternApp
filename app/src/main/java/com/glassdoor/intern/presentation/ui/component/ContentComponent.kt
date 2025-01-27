@@ -69,10 +69,12 @@ internal fun ContentComponent(
         verticalArrangement = Arrangement.spacedBy(InternTheme.dimensions.double),
     ) {
         /**
-         * TODO: Specify the [item key](https://developer.android.com/jetpack/compose/lists#item-keys) and [content type](https://developer.android.com/jetpack/compose/lists#content-type)
+         * DONE: Specify the [item key](https://developer.android.com/jetpack/compose/lists#item-keys) and [content type](https://developer.android.com/jetpack/compose/lists#content-type)
          */
         items(
             items = items,
+            key = { it.key },
+            contentType = { "item" },
             itemContent = { item -> ItemComponent(item) },
         )
     }
@@ -95,10 +97,15 @@ private fun HeaderComponent(
             color = MaterialTheme.colorScheme.primary
         )
     ) {
-        with(header) {
-            /**
-             * TODO: [Declare the UI](https://developer.android.com/codelabs/jetpack-compose-basics#5) based on the UI model structure
-             */
+        /**
+         * DONE: [Declare the UI](https://developer.android.com/codelabs/jetpack-compose-basics#5) based on the UI model structure
+         */
+        LazyColumn(
+            modifier = Modifier.padding(16.dp).fillMaxWidth()
+        ) {
+            items(header.items) { item ->
+                ItemComponent(item)
+            }
         }
     }
 }
@@ -142,7 +149,7 @@ private fun ItemComponent(item: ItemUiModel) = Card {
                 contentDescription = title,
                 contentScale = ContentScale.Crop,
                 error = rememberVectorPainter(Icons.Default.Warning),
-                model = TODO("[Request an image download](https://github.com/coil-kt/coil#requests)"),
+                model = imageUrl, // DONE("[Request an image download](https://github.com/coil-kt/coil#requests)")
             )
         }
     }
@@ -180,14 +187,69 @@ private fun ItemComponentPreview(
 
 private typealias HeaderAndItems = Pair<HeaderUiModel, List<ItemUiModel>>
 
+/**
+ * DONE: Define UI models for preview purposes
+ */
 private class ContentComponentPreviewParameterProvider :
-    PreviewParameterProvider<HeaderAndItems> by previewParameterProviderOf(
-        TODO("Define UI models for preview purposes")
+    PreviewParameterProvider<HeaderAndItems> {
+    override val values: Sequence<HeaderAndItems> = sequenceOf(
+        HeaderAndItems(
+            first = HeaderUiModel(
+                items = listOf(
+                    ItemUiModel(
+                        title = "Item Title 0",
+                        description = "Item Description 0",
+                        imageUrl = "https://picsum.photos/200/300?grayscale",
+                        timestamp = "10:00"
+                    ),
+                    ItemUiModel(
+                        title = "Item Title 1",
+                        description = "Item Description 1",
+                        imageUrl = null,
+                        timestamp = "11:00"
+                    )
+                )
+            ),
+            second = listOf(
+                ItemUiModel(
+                    title = "Item Title 0",
+                    description = "Item Description 0",
+                    imageUrl = null,
+                    timestamp = "10:00"
+                ),
+                ItemUiModel(
+                    title = "Item Title 1",
+                    description = "Item Description 1",
+                    imageUrl = null,
+                    timestamp = "11:00"
+                )
+            ),
+        )
     )
+}
 
+
+/**
+ * DONE: Define UI models for preview purposes
+ */
 private class HeaderComponentPreviewParameterProvider :
     PreviewParameterProvider<HeaderUiModel> by previewParameterProviderOf(
-        TODO("Define UI models for preview purposes")
+        HeaderUiModel(
+            items = listOf(
+                ItemUiModel(
+                    title = "Item Title 0",
+                    description = "Item Description 0",
+                    imageUrl = null,
+                    timestamp = "10:00",
+                ),
+                ItemUiModel(
+                    title = "Item Title 1",
+                    description = "Item Description 1",
+                    imageUrl = null,
+                    timestamp = "11:00",
+                )
+            )
+        )
     )
 
 private class ItemComponentPreviewParameterProvider :
