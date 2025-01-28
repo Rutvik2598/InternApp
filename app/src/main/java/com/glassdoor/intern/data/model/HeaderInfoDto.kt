@@ -19,5 +19,6 @@ internal data class HeaderInfoDto(
     val id: String,
     val title: String,
     val description: String,
+    val lastUpdated: Long,
     val items: List<ItemInfoDto>
 )

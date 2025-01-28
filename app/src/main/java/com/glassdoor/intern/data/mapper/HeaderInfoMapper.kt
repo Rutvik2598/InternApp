@@ -26,6 +26,7 @@ internal class HeaderInfoMapper @Inject constructor() {
             id = id,
             title = title,
             description = description,
+            lastUpdated = lastUpdated,
             items = items.map(::toDomain)
         )
     }

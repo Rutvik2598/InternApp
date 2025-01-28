@@ -195,6 +195,10 @@ private class ContentComponentPreviewParameterProvider :
     override val values: Sequence<HeaderAndItems> = sequenceOf(
         HeaderAndItems(
             first = HeaderUiModel(
+                id = "header_1",
+                title = "Trending Articles",
+                description = "Latest updates on technology",
+                lastUpdated = "Jan 27, 2025 14:30",
                 items = listOf(
                     ItemUiModel(
                         title = "Item Title 0",
@@ -235,6 +239,10 @@ private class ContentComponentPreviewParameterProvider :
 private class HeaderComponentPreviewParameterProvider :
     PreviewParameterProvider<HeaderUiModel> by previewParameterProviderOf(
         HeaderUiModel(
+            id = "header_1",
+            title = "Recommended Books",
+            description = "Curated list of must-reads",
+            lastUpdated = "Jan 27, 2025 16:45",
             items = listOf(
                 ItemUiModel(
                     title = "Item Title 0",

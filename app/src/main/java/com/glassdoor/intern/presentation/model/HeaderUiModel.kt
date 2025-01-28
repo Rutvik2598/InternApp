@@ -20,6 +20,10 @@ import kotlinx.parcelize.Parcelize
 @Immutable
 @Parcelize
 internal class HeaderUiModel(
+    val id: String,
+    val title: String,
+    val description: String,
+    val lastUpdated: String,
     val items: List<ItemUiModel>
 ) : Parcelable {
 
