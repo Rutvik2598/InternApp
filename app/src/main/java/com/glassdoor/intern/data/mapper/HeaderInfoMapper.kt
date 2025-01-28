@@ -23,10 +23,9 @@ internal class HeaderInfoMapper @Inject constructor() {
      */
     fun toDomain(header: HeaderInfoDto, items: List<ItemInfoDto>): HeaderInfo = with(header) {
         HeaderInfo(
-            id = id,
             title = title,
             description = description,
-            lastUpdated = lastUpdated,
+            timestamp = timestamp,
             items = items.map(::toDomain)
         )
     }

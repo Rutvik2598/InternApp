@@ -9,6 +9,7 @@
 
 package com.glassdoor.intern.data.model
 
+import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
@@ -16,9 +17,10 @@ import com.squareup.moshi.JsonClass
  */
 @JsonClass(generateAdapter = true)
 internal data class HeaderInfoDto(
-    val id: String,
+    @Json(name = "title")
     val title: String,
+    @Json(name = "description")
     val description: String,
-    val lastUpdated: Long,
-    val items: List<ItemInfoDto>
+    @Json(name = "timestamp")
+    val timestamp: String,
 )

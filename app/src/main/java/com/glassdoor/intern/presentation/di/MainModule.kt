@@ -26,10 +26,9 @@ internal object MainModule {
         MainUiState(
             errorMessage = null,
             header = HeaderUiModel(
-                id = "id",
                 title = "Title",
                 description = "Description",
-                lastUpdated = "Not updated",
+                timestamp = "Not updated",
                 items = emptyList()
             ),
             isLoading = false,

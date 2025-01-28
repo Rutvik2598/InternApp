@@ -72,10 +72,9 @@ private fun MainScreenPreview() = InternTheme {
         isLoading = false,
         errorMessage = null,
         header = HeaderUiModel(
-            id = "header_preview",
             title = "Preview Header",
             description = "This is a preview description.",
-            lastUpdated = "Just now",
+            timestamp = "Just now",
             items = listOf(
                 ItemUiModel(
                     title = "Preview Item 1",

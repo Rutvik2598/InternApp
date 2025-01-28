@@ -54,12 +54,6 @@ internal fun ContentComponent(
     items: List<ItemUiModel>,
     modifier: Modifier = Modifier,
 ) = Column(modifier = modifier) {
-    HeaderComponent(
-        modifier = Modifier
-            .padding(horizontal = InternTheme.dimensions.normal)
-            .padding(top = InternTheme.dimensions.normal),
-        header = header,
-    )
 
     LazyColumn(
         modifier = Modifier
@@ -68,6 +62,12 @@ internal fun ContentComponent(
         contentPadding = PaddingValues(InternTheme.dimensions.double),
         verticalArrangement = Arrangement.spacedBy(InternTheme.dimensions.double),
     ) {
+        item {
+            HeaderComponent(
+                modifier = Modifier,
+                header = header,
+            )
+        }
         /**
          * DONE: Specify the [item key](https://developer.android.com/jetpack/compose/lists#item-keys) and [content type](https://developer.android.com/jetpack/compose/lists#content-type)
          */
@@ -95,13 +95,13 @@ private fun HeaderComponent(
         border = BorderStroke(
             width = headerBorderStrokeWidth,
             color = MaterialTheme.colorScheme.primary
-        )
+        ),
     ) {
         /**
          * DONE: [Declare the UI](https://developer.android.com/codelabs/jetpack-compose-basics#5) based on the UI model structure
          */
         Column(
-            modifier = Modifier.padding(16.dp)
+            modifier = Modifier.padding(InternTheme.dimensions.double).fillMaxWidth()
         ) {
             Text(
                 text = header.title,
@@ -115,18 +115,11 @@ private fun HeaderComponent(
                 modifier = Modifier.padding(top = 5.dp)
             )
             Text(
-                text = "Last updated: ${header.lastUpdated}",
+                text = "Last updated: ${header.timestamp}",
                 style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.padding(top = 10.dp)
             )
-        }
-        LazyColumn(
-            modifier = Modifier.padding(16.dp).fillMaxWidth()
-        ) {
-            items(header.items) { item ->
-                ItemComponent(item)
-            }
         }
     }
 }
@@ -212,34 +205,19 @@ private typealias HeaderAndItems = Pair<HeaderUiModel, List<ItemUiModel>>
  * DONE: Define UI models for preview purposes
  */
 private class ContentComponentPreviewParameterProvider :
-    PreviewParameterProvider<HeaderAndItems> {
-    override val values: Sequence<HeaderAndItems> = sequenceOf(
+    PreviewParameterProvider<HeaderAndItems> by previewParameterProviderOf(
         HeaderAndItems(
             first = HeaderUiModel(
-                id = "header_1",
                 title = "Trending Articles",
                 description = "Latest updates on technology",
-                lastUpdated = "Jan 27, 2025 14:30",
-                items = listOf(
-                    ItemUiModel(
-                        title = "Item Title 0",
-                        description = "Item Description 0",
-                        imageUrl = "https://picsum.photos/200/300?grayscale",
-                        timestamp = "10:00"
-                    ),
-                    ItemUiModel(
-                        title = "Item Title 1",
-                        description = "Item Description 1",
-                        imageUrl = null,
-                        timestamp = "11:00"
-                    )
-                )
+                timestamp = "Jan 27, 2025 14:30",
+                items = emptyList()
             ),
             second = listOf(
                 ItemUiModel(
                     title = "Item Title 0",
                     description = "Item Description 0",
-                    imageUrl = null,
+                    imageUrl = "https://picsum.photos/200/300?grayscale",
                     timestamp = "10:00"
                 ),
                 ItemUiModel(
@@ -251,7 +229,6 @@ private class ContentComponentPreviewParameterProvider :
             ),
         )
     )
-}
 
 
 /**
@@ -260,10 +237,9 @@ private class ContentComponentPreviewParameterProvider :
 private class HeaderComponentPreviewParameterProvider :
     PreviewParameterProvider<HeaderUiModel> by previewParameterProviderOf(
         HeaderUiModel(
-            id = "header_1",
             title = "Recommended Books",
             description = "Curated list of must-reads",
-            lastUpdated = "Jan 27, 2025 16:45",
+            timestamp = "Jan 27, 2025 16:45",
             items = listOf(
                 ItemUiModel(
                     title = "Item Title 0",

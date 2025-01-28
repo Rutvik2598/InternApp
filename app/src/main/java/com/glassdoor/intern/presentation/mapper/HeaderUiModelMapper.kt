@@ -27,17 +27,21 @@ internal class HeaderUiModelMapper @Inject constructor(
     // DONE: Convert domain model to UI model
     fun toUiModel(headerInfo: HeaderInfo): HeaderUiModel = with(headerInfo) {
         HeaderUiModel(
-            id = id,
             title = title,
             description = description,
-            lastUpdated = formatTimestamp(lastUpdated),
+            timestamp = formatTimestamp(timestamp),
             items = items.map { item ->
                 itemUiModelMapper.toUiModel(item)
             },
         )
     }
 
-    private fun formatTimestamp(timestamp: Long): String {
-        return dateFormatter.format(Instant.ofEpochMilli(timestamp))
+    private fun formatTimestamp(timestamp: String): String {
+        return try {
+            val instant = Instant.parse(timestamp)
+            dateFormatter.format(instant)
+        } catch (e: Exception) {
+            "Invalid Date"
+        }
     }
 }
