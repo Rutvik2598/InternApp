@@ -66,7 +66,7 @@ For each correctly completed instruction, **1 point** is awarded, which must the
 - [x] [MainViewModel.kt](app/src/main/java/com/glassdoor/intern/presentation/MainViewModel.kt): Refresh the screen only when the header is empty
 - [x] [MainViewModel.kt](app/src/main/java/com/glassdoor/intern/presentation/MainViewModel.kt): Separate handling and update correct properties `previousUiState`
 - [x] [MainViewModel.kt](app/src/main/java/com/glassdoor/intern/presentation/MainViewModel.kt): Transform the header domain model to the UI model
-- [ ] [Strings.xml](app/src/main/res/values/strings.xml): Provide a suitable application name
+- [x] [Strings.xml](app/src/main/res/values/strings.xml): Provide a suitable application name
 - [x] [TokenInterceptor.kt](app/src/main/java/com/glassdoor/intern/data/network/TokenInterceptor.kt): Declare the email address from your resume as a token
 - [x] [TopBarComponent.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/component/TopBarComponent.kt): Declare a [title](https://developer.android.com/reference/kotlin/androidx/compose/material/package-summary#Text(androidx.compose.ui.text.AnnotatedString,androidx.compose.ui.Modifier,androidx.compose.ui.graphics.Color,androidx.compose.ui.unit.TextUnit,androidx.compose.ui.text.font.FontStyle,androidx.compose.ui.text.font.FontWeight,androidx.compose.ui.text.font.FontFamily,androidx.compose.ui.unit.TextUnit,androidx.compose.ui.text.style.TextDecoration,androidx.compose.ui.text.style.TextAlign,androidx.compose.ui.unit.TextUnit,androidx.compose.ui.text.style.TextOverflow,kotlin.Boolean,kotlin.Int,kotlin.Int,kotlin.collections.Map,kotlin.Function1,androidx.compose.ui.text.TextStyle)) using the app name resource from strings
 - [x] [TopBarComponent.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/component/TopBarComponent.kt): Define a component and use the state to preview it
@@ -76,9 +76,9 @@ For each correctly completed instruction, **1 point** is awarded, which must the
 
 - [ ] The application does not crash
 - [ ] The previously loaded list remains on the screen after the error appears
-- [ ] All fulfilled `TODO` instructions remain in place, and the prefix is replaced with the word `DONE`
-- [ ] The project's change history has the [conventional commit messages](https://www.conventionalcommits.org/en/v1.0.0)
-- [ ] [The project has a history of changes](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository)
+- [x] All fulfilled `TODO` instructions remain in place, and the prefix is replaced with the word `DONE`
+- [x] The project's change history has the [conventional commit messages](https://www.conventionalcommits.org/en/v1.0.0)
+- [x] [The project has a history of changes](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository)
 
 #### What does not affect the rating
 
