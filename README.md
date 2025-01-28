@@ -55,10 +55,10 @@ For each correctly completed instruction, **1 point** is awarded, which must the
 - [x] [ItemUiModel.kt](app/src/main/java/com/glassdoor/intern/presentation/model/ItemUiModel.kt): Determine the key value
 - [x] [LoggingModule.kt](app/src/main/java/com/glassdoor/intern/utils/logging/LoggingModule.kt): [Annotate the DI module](https://developer.android.com/training/dependency-injection/hilt-android#hilt-modules) with correct definitions and [component](https://developer.android.com/training/dependency-injection/hilt-android#hilt-modules)
 - [x] [MainActivity.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/MainActivity.kt): [Annotate a class for dependency injection](https://developer.android.com/training/dependency-injection/hilt-android#android-classes)
-- [ ] [MainActivity.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/MainActivity.kt): Define the main composable to display
-- [ ] [MainModule.kt](app/src/main/java/com/glassdoor/intern/presentation/di/MainModule.kt): Define default values and provide initial state
-- [ ] [MainScreen.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/MainScreen.kt): [Consume UI state safely from the ViewModel](https://developer.android.com/codelabs/jetpack-compose-advanced-state-side-effects#3)
-- [ ] [MainScreen.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/MainScreen.kt): Define UI state for preview purposes
+- [x] [MainActivity.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/MainActivity.kt): Define the main composable to display
+- [x] [MainModule.kt](app/src/main/java/com/glassdoor/intern/presentation/di/MainModule.kt): Define default values and provide initial state
+- [x] [MainScreen.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/MainScreen.kt): [Consume UI state safely from the ViewModel](https://developer.android.com/codelabs/jetpack-compose-advanced-state-side-effects#3)
+- [x] [MainScreen.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/MainScreen.kt): Define UI state for preview purposes
 - [x] [MainViewModel.kt](app/src/main/java/com/glassdoor/intern/presentation/MainViewModel.kt): Define the correct methods as callbacks
 - [x] [MainViewModel.kt](app/src/main/java/com/glassdoor/intern/presentation/MainViewModel.kt): Delegate method to `uiStateMachine`
 - [x] [MainViewModel.kt](app/src/main/java/com/glassdoor/intern/presentation/MainViewModel.kt): Emit the transformed UI model as state
@@ -68,9 +68,9 @@ For each correctly completed instruction, **1 point** is awarded, which must the
 - [x] [MainViewModel.kt](app/src/main/java/com/glassdoor/intern/presentation/MainViewModel.kt): Transform the header domain model to the UI model
 - [ ] [Strings.xml](app/src/main/res/values/strings.xml): Provide a suitable application name
 - [x] [TokenInterceptor.kt](app/src/main/java/com/glassdoor/intern/data/network/TokenInterceptor.kt): Declare the email address from your resume as a token
-- [ ] [TopBarComponent.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/component/TopBarComponent.kt): Declare a [title](https://developer.android.com/reference/kotlin/androidx/compose/material/package-summary#Text(androidx.compose.ui.text.AnnotatedString,androidx.compose.ui.Modifier,androidx.compose.ui.graphics.Color,androidx.compose.ui.unit.TextUnit,androidx.compose.ui.text.font.FontStyle,androidx.compose.ui.text.font.FontWeight,androidx.compose.ui.text.font.FontFamily,androidx.compose.ui.unit.TextUnit,androidx.compose.ui.text.style.TextDecoration,androidx.compose.ui.text.style.TextAlign,androidx.compose.ui.unit.TextUnit,androidx.compose.ui.text.style.TextOverflow,kotlin.Boolean,kotlin.Int,kotlin.Int,kotlin.collections.Map,kotlin.Function1,androidx.compose.ui.text.TextStyle)) using the app name resource from strings
-- [ ] [TopBarComponent.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/component/TopBarComponent.kt): Define a component and use the state to preview it
-- [ ] [TopBarComponent.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/component/TopBarComponent.kt): Define all possible states for preview purposes
+- [x] [TopBarComponent.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/component/TopBarComponent.kt): Declare a [title](https://developer.android.com/reference/kotlin/androidx/compose/material/package-summary#Text(androidx.compose.ui.text.AnnotatedString,androidx.compose.ui.Modifier,androidx.compose.ui.graphics.Color,androidx.compose.ui.unit.TextUnit,androidx.compose.ui.text.font.FontStyle,androidx.compose.ui.text.font.FontWeight,androidx.compose.ui.text.font.FontFamily,androidx.compose.ui.unit.TextUnit,androidx.compose.ui.text.style.TextDecoration,androidx.compose.ui.text.style.TextAlign,androidx.compose.ui.unit.TextUnit,androidx.compose.ui.text.style.TextOverflow,kotlin.Boolean,kotlin.Int,kotlin.Int,kotlin.collections.Map,kotlin.Function1,androidx.compose.ui.text.TextStyle)) using the app name resource from strings
+- [x] [TopBarComponent.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/component/TopBarComponent.kt): Define a component and use the state to preview it
+- [x] [TopBarComponent.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/component/TopBarComponent.kt): Define all possible states for preview purposes
 
 #### Bonus points
 

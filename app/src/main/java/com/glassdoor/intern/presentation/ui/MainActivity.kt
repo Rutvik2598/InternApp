@@ -31,8 +31,9 @@ internal class MainActivity : ComponentActivity() {
         setContent {
             InternTheme {
                 /**
-                 * TODO: Define the main composable to display
+                 * DONE: Define the main composable to display
                  */
+                MainScreen(viewModel = viewModel)
             }
         }
     }
