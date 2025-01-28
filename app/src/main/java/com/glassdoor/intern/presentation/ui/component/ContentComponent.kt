@@ -100,6 +100,27 @@ private fun HeaderComponent(
         /**
          * DONE: [Declare the UI](https://developer.android.com/codelabs/jetpack-compose-basics#5) based on the UI model structure
          */
+        Column(
+            modifier = Modifier.padding(16.dp)
+        ) {
+            Text(
+                text = header.title,
+                style = MaterialTheme.typography.titleLarge,
+                color = MaterialTheme.colorScheme.primary
+            )
+            Text(
+                text = header.description,
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                modifier = Modifier.padding(top = 5.dp)
+            )
+            Text(
+                text = "Last updated: ${header.lastUpdated}",
+                style = MaterialTheme.typography.labelSmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                modifier = Modifier.padding(top = 10.dp)
+            )
+        }
         LazyColumn(
             modifier = Modifier.padding(16.dp).fillMaxWidth()
         ) {
