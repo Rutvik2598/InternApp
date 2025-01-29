@@ -77,8 +77,6 @@ internal class MainViewModel @Inject constructor(
 
         emit(HideLoadingState)
 
-        emit(UpdateItemsState(emptyList()))
-
         emit(UpdateErrorMessageState(errorMessage = throwable.message))
     }
 
@@ -94,18 +92,15 @@ internal class MainViewModel @Inject constructor(
         /**
          * DONE: Separate handling and update correct properties [previousUiState]
          */
-        HideLoadingState,  -> {
+        HideLoadingState  -> {
             previousUiState.copy(isLoading = false)
         }
         ShowLoadingState -> {
             previousUiState.copy(isLoading = true)
         }
 
-        is UpdateErrorMessageState -> with(partialState) {
-            previousUiState.copy(
-                errorMessage = errorMessage,
-                items = if (errorMessage.isNullOrEmpty()) previousUiState.items else emptyList(),
-            )
+        is UpdateErrorMessageState -> {
+            previousUiState.copy(errorMessage = partialState.errorMessage)
         }
 
         is UpdateHeaderState -> {
@@ -131,7 +126,7 @@ internal class MainViewModel @Inject constructor(
                  */
                 val headerUiModel = headerUiModelMapper.toUiModel(headerInfo)
                 emit(UpdateHeaderState(header = headerUiModel))
-                emit(UpdateItemsState(headerUiModel.items))
+                emit(UpdateItemsState(items = headerUiModel.items))
             }
             .onFailure { throwable ->
                 emit(UpdateErrorMessageState(errorMessage = throwable.message))
