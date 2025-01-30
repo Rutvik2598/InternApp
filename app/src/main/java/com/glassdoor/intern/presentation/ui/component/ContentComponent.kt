@@ -201,45 +201,38 @@ private fun ItemComponentPreview(
 
 private typealias HeaderAndItems = Pair<HeaderUiModel, List<ItemUiModel>>
 
+// Sample list of items to be used in UI previews.
+// Each item contains a title, description, optional image URL, and timestamp.
+private val sampleItems = listOf(
+    ItemUiModel(
+        title = "Item Title 0",
+        description = "Item Description 0",
+        imageUrl = "https://picsum.photos/200/300?grayscale",
+        timestamp = "10:00"
+    ),
+    ItemUiModel(
+        title = "Item Title 1",
+        description = "Item Description 1",
+        imageUrl = null,
+        timestamp = "11:00"
+    )
+)
+
+private val sampleHeader = HeaderUiModel(
+    title = "Trending Articles",
+    description = "Latest updates on technology",
+    timestamp = "Jan 27, 2025 14:30",
+    items = sampleItems
+)
+
 /**
  * DONE: Define UI models for preview purposes
  */
 private class ContentComponentPreviewParameterProvider :
     PreviewParameterProvider<HeaderAndItems> by previewParameterProviderOf(
         HeaderAndItems(
-            first = HeaderUiModel(
-                title = "Trending Articles",
-                description = "Latest updates on technology",
-                timestamp = "Jan 27, 2025 14:30",
-                items = listOf(
-                    ItemUiModel(
-                        title = "Item Title 0",
-                        description = "Item Description 0",
-                        imageUrl = "https://picsum.photos/200/300?grayscale",
-                        timestamp = "10:00"
-                    ),
-                    ItemUiModel(
-                        title = "Item Title 1",
-                        description = "Item Description 1",
-                        imageUrl = null,
-                        timestamp = "11:00"
-                    )
-                )
-            ),
-            second = listOf(
-                ItemUiModel(
-                    title = "Item Title 0",
-                    description = "Item Description 0",
-                    imageUrl = "https://picsum.photos/200/300?grayscale",
-                    timestamp = "10:00"
-                ),
-                ItemUiModel(
-                    title = "Item Title 1",
-                    description = "Item Description 1",
-                    imageUrl = null,
-                    timestamp = "11:00"
-                )
-            ),
+            first = sampleHeader,
+            second = sampleItems
         )
     )
 
@@ -248,27 +241,7 @@ private class ContentComponentPreviewParameterProvider :
  * DONE: Define UI models for preview purposes
  */
 private class HeaderComponentPreviewParameterProvider :
-    PreviewParameterProvider<HeaderUiModel> by previewParameterProviderOf(
-        HeaderUiModel(
-            title = "Trending Articles",
-            description = "Latest updates on technology",
-            timestamp = "Jan 27, 2025 14:30",
-            items = listOf(
-                ItemUiModel(
-                    title = "Item Title 0",
-                    description = "Item Description 0",
-                    imageUrl = "https://picsum.photos/200/300?grayscale",
-                    timestamp = "10:00"
-                ),
-                ItemUiModel(
-                    title = "Item Title 1",
-                    description = "Item Description 1",
-                    imageUrl = null,
-                    timestamp = "11:00"
-                )
-            )
-        )
-    )
+    PreviewParameterProvider<HeaderUiModel> by previewParameterProviderOf(sampleHeader)
 
 private class ItemComponentPreviewParameterProvider :
     PreviewParameterProvider<ItemUiModel> by previewParameterProviderOf(
