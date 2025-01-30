@@ -77,7 +77,7 @@ dependencies {
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.material3:material3")
-    implementation("androidx.compose.ui:ui-tooling:1.7.6")
+    implementation("androidx.compose.ui:ui-tooling")
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation(platform("androidx.compose:compose-bom:2025.01.00"))
 

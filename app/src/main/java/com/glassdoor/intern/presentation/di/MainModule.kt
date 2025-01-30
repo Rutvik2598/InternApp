@@ -28,7 +28,7 @@ internal object MainModule {
             header = HeaderUiModel(
                 title = "Title",
                 description = "Description",
-                timestamp = "Not updated",
+                timestamp = "Jan 27, 2025 14:30",
                 items = emptyList()
             ),
             isLoading = false,

@@ -36,6 +36,13 @@ internal class HeaderUiModelMapper @Inject constructor(
         )
     }
 
+    /**
+     * Formats a timestamp string into a user-friendly date-time format.
+     *
+     * @param timestamp The timestamp string.
+     * @return A formatted date-time string if parsing is successful
+     *         otherwise returns "Invalid Date" in case of an error.
+     */
     private fun formatTimestamp(timestamp: String): String {
         return try {
             val instant = Instant.parse(timestamp)

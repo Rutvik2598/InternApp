@@ -211,7 +211,20 @@ private class ContentComponentPreviewParameterProvider :
                 title = "Trending Articles",
                 description = "Latest updates on technology",
                 timestamp = "Jan 27, 2025 14:30",
-                items = emptyList()
+                items = listOf(
+                    ItemUiModel(
+                        title = "Item Title 0",
+                        description = "Item Description 0",
+                        imageUrl = "https://picsum.photos/200/300?grayscale",
+                        timestamp = "10:00"
+                    ),
+                    ItemUiModel(
+                        title = "Item Title 1",
+                        description = "Item Description 1",
+                        imageUrl = null,
+                        timestamp = "11:00"
+                    )
+                )
             ),
             second = listOf(
                 ItemUiModel(
@@ -237,21 +250,21 @@ private class ContentComponentPreviewParameterProvider :
 private class HeaderComponentPreviewParameterProvider :
     PreviewParameterProvider<HeaderUiModel> by previewParameterProviderOf(
         HeaderUiModel(
-            title = "Recommended Books",
-            description = "Curated list of must-reads",
-            timestamp = "Jan 27, 2025 16:45",
+            title = "Trending Articles",
+            description = "Latest updates on technology",
+            timestamp = "Jan 27, 2025 14:30",
             items = listOf(
                 ItemUiModel(
                     title = "Item Title 0",
                     description = "Item Description 0",
-                    imageUrl = null,
-                    timestamp = "10:00",
+                    imageUrl = "https://picsum.photos/200/300?grayscale",
+                    timestamp = "10:00"
                 ),
                 ItemUiModel(
                     title = "Item Title 1",
                     description = "Item Description 1",
                     imageUrl = null,
-                    timestamp = "11:00",
+                    timestamp = "11:00"
                 )
             )
         )
